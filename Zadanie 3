@@ -1,0 +1,17 @@
+def conv(n): 
+    a = ['т','а','ов']
+    n = n % 100
+    if n>=11 and n<=19:
+        b=a[2] 
+    else:
+        i = n % 10
+        if i == 1:
+            b = a[0] 
+        elif i in [2,3,4]:
+            b = a[1] 
+        else:
+            b = a[2] 
+    return b 
+
+for i in range(1,101):
+    print('{} процент{}'.format(i, conv(i)))
